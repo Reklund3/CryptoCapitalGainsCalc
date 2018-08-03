@@ -1,12 +1,28 @@
 body
 {
-    background: rgb(141, 142, 143);
+    background: rgb(6, 6, 19);
     color: white;
-    margin: 2% 10%;
+    margin: 2% 5%;
 }
 table, th, td {
     padding: 5px 15px;
     border-spacing: 5px;
+}
+table
+{
+    width: 80%;
+}
+form
+{
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    width:90%;
+}
+a, h1
+{
+    color: white;
+    text-decoration: none;
 }
 .grid-Container
 {
@@ -14,8 +30,8 @@ table, th, td {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "top top"
-    "box1 box1"
     "box2 box3"
+    "box1 box1"
     "box4 box4"
     "foot foot";
     grid-gap: 1em;
@@ -23,7 +39,7 @@ table, th, td {
 .box
 {
     display: flex;
-    background: rgba(126, 255, 244, 0.3);
+    background: rgba(160, 160, 160, 0.274);
     border: 5px solid white;
     border-radius: 15px;
     padding: 15px;
@@ -34,6 +50,13 @@ table, th, td {
     display: flex;
     justify-content: space-around;
     width: 40%;
+}
+.form-field
+{
+    display: inline-block;
+    text-align: center;
+    font-size: 1.25em;
+    width: 30%;
 }
 #logo-text
 {
@@ -51,8 +74,10 @@ table, th, td {
 }
 #box1
 {
-    display: flex;
+    display: inline-flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+    height: auto;
     grid-area: box1;
 }
 #table-title
@@ -63,6 +88,8 @@ table, th, td {
 }
 #box2
 {
+    display: flex;
+    justify-content: space-around;
     grid-area: box2;
 }
 #box3
@@ -71,10 +98,18 @@ table, th, td {
 }
 #box4
 {
+    display: flex;
+    justify-content: space-around;
     grid-area: box4;
 }
 #foot
 {
     grid-area: foot;
     height: initial;
+}
+#trade-submit-button
+{
+    height: 25px;
+    width: 75px;
+    border-radius: 5px;
 }

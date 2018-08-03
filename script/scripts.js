@@ -2,16 +2,20 @@
 var coinPrice;
 window.onload = function()
 {
-
     getPrice();
-    console.log(coinPrice);
+    setInterval( getPrice, 10000);
+    setInterval (function () {
+        console.log(coinPrice * 10);
+    }, 10000)
 }
 
 function getPrice()
 {
     var jqxhr = $.getJSON( "https://api.coinbase.com/v2/prices/ETH-USD/spot", {},function(data) {
-        $("#coinPrice").text(data.data.amount);
-        coinPrice = JSON.stringify(data.data.amount);
+        $("#coinPrice").text("$ " + data.data.amount);
+        coinPrice = data.data.amount;
+        // coinPrice = JSON.stringify(data.data.amount);
+        //console.log(data.data.amount);
     })
 }
 /*

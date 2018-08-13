@@ -88,12 +88,15 @@ a, h1
 }
 #box2
 {
-    display: flex;
+    display: inline;
+    text-align: center;
     justify-content: space-around;
     grid-area: box2;
 }
 #box3
 {
+    display: inline;
+    text-align: center;
     grid-area: box3;
 }
 #box4
@@ -104,6 +107,8 @@ a, h1
 }
 #foot
 {
+    display: flex;
+    justify-content: center;
     grid-area: foot;
     height: initial;
 }

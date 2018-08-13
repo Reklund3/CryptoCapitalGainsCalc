@@ -1,12 +1,10 @@
 "use strict";
 var coinPrice;
+var transaction = [[]];
 window.onload = function()
 {
     getPrice();
     setInterval( getPrice, 10000);
-    setInterval (function () {
-        console.log(coinPrice * 10);
-    }, 10000)
 }
 
 function getPrice()
@@ -18,11 +16,17 @@ function getPrice()
         //console.log(data.data.amount);
     })
 }
-/*
-ask the user to enter a list of students for a list of students -- put the students in a stack
-prompt to enter the grades for the students for each student add a list of grades -- dictionary of student grades[];
-program should output the avg grade for each student
 
-req: implement a student to grade array dictionary
-for practice you could implement the student input as a stack
-*/
+$("#trade-submit-button").on('click', function ()
+{
+    transaction[0] = $('#trans-date').val();
+    transaction[1] = $('#quantity-input').val();
+    transaction[2] = $('#trans-price-input').val();
+    transaction[3] = $('#sell-buy-select').val();
+    transaction.forEach(function(){
+        console.log(transaction[0]);
+        console.log(transaction[1]);
+        console.log(transaction[2]);
+        console.log(transaction[3]);
+    });
+});

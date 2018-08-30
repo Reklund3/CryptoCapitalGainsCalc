@@ -15,12 +15,13 @@ function getPrice()
     })
 }
 
-$("#trade-submit-button").on('click', () => {
+const clickAddTransaction = () => {
     transaction.push({
         transactionDate: $('#trans-date').val(),
         quantity: $('#quantity-input').val(),
         price: $('#trans-price-input').val(),
-        transactionType: $('#sell-buy-select').val(),    
-    });
-    console.log(transaction);
-});
+        transactionType: $('#sell-buy-select').val(),       
+  });  
+}
+
+$("#trade-submit-button").on('click', clickAddTransaction);

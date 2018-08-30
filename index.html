@@ -1,4 +1,4 @@
-<DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -21,41 +21,64 @@
             </div>
         </div>
         <div class="box" id="box1">
-            <table>
-                <caption id="table-title">Transaction Details</caption>
-                <tr>
-                    <th>Line #</th>
-                    <th>Aquisition Date</th>
-                    <th>Sale Date</th>
-                    <th>Aquisition Price</th>
-                    <th>Sales Price</th>
-                    <th>Quantity</th>
-                    <th>Gain</th>
-                    <th>Term (Short/Long)</th>
-                </tr>
-                <tr>
-                    <th>1</th>
-                    <th>3/5/2018</th>
-                    <th>5/3/2018</th>
-                    <th>200</th>
-                    <th>300</th>
-                    <th>2</th>
-                    <th>200</th>
-                    <th>Short</th>
-                </tr>
-            </table>
+            <form action="trade-form">
+                <div class="form-field">
+                    <p>Transaction Date</p>
+                    <input type="date" name="transaction-date" id="trans-date">
+                </div>
+                <div class="form-field">
+                    <p>Quantity</p>
+                    <input type="text" name="quantity" id="quantity-input" placeholder="Quantity">
+                </div>
+                <div class="form-field">
+                    <p>Trade Price</p>
+                    <input type="text" name="trans-price" id="trans-price-input" placeholder="Trade Price">
+                </div>
+                <div class="form-field">
+                    <select id="sell-buy-select" name="sell-buy-select">
+                        <option value="Sale">Sale</option>
+                        <option value="Purchase">Purchase</option>
+                    </select>
+                    <input type="button" id="trade-submit-button" value="Submit">
+                </div>
+            </form>
         </div>
         <div class="box" id="box2">
-            <div id="root"></div>
+            <h2>About</h2>
+            <p>This calculator has been developed to help determine your estimated tax liability
+            for capital gains transactions. The data you enter here will help determine if the
+            purchase/earned cryto and subsequent sale are long term or short term gains.</p>
         </div>
         <div class="box" id="box3">
-            <h1>Current Etherium Price: <span id="coinPrice"></span></h1>
+            <h2>Ethereum: <span id="coinPrice"></span></h2>
         </div>
         <div class="box" id="box4">
-            box 4
+                <table>
+                        <caption id="table-title">Transaction Details</caption>
+                        <tr>
+                            <th>Line #</th>
+                            <th>Aquisition Date</th>
+                            <th>Sale Date</th>
+                            <th>Aquisition Price</th>
+                            <th>Sales Price</th>
+                            <th>Quantity</th>
+                            <th>Gain</th>
+                            <th>Term (Short/Long)</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <th>3/5/2018</th>
+                            <th>5/3/2018</th>
+                            <th>200</th>
+                            <th>300</th>
+                            <th>2</th>
+                            <th>200</th>
+                            <th>Short</th>
+                        </tr>
+                    </table>
         </div>
         <div class="box" id="foot">
-
+          <p>&copy 2018</p>
         </div>
     </div>
     <script src="./script/scripts.js"></script>

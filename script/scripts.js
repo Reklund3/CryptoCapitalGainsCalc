@@ -15,12 +15,12 @@ function getPrice()
     })
 }
 function updateTable () {
-  let lineNum = $("tr") ;
-  let aquisitionDate = transaction[transaction.length];
+  let lineNum = transaction.length;
+  let aquisitionDate = transaction[transaction.length-1].transactionDate;
   let saleDate;
-  let aquisitionPrice;
+  let aquisitionPrice = transaction[transaction.length-1].price;
   let salePrice;
-  let qty;
+  let qty = transaction[transaction.length-1].quantity;
   let gain;
   let term;
   let line;

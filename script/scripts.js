@@ -1,6 +1,6 @@
 "use strict";
 var coinPrice;
-var transaction = [];
+let transaction = [];
 window.onload = function()
 {
     getPrice();
@@ -14,13 +14,35 @@ function getPrice()
         coinPrice = data.data.amount;
     })
 }
-
-$("#trade-submit-button").on('click', () => {
+function updateTable () {
+  let lineNum = $("tr") ;
+  let aquisitionDate = transaction[transaction.length];
+  let saleDate;
+  let aquisitionPrice;
+  let salePrice;
+  let qty;
+  let gain;
+  let term;
+  let line;
+  line = '<tr><th>'+lineNum+
+         '</th><th>'+aquisitionDate+
+         '</th><th>'+saleDate+
+         '</th><th>'+aquisitionPrice+
+         '</th><th>'+salePrice+
+         '</th><th>'+qty+
+         '</th><th>'+gain+
+         '</th><th>'+term+
+         '</th></tr>'
+  $("#transaction-table").append(line)
+}
+const clickAddTransaction = () => {
     transaction.push({
         transactionDate: $('#trans-date').val(),
         quantity: $('#quantity-input').val(),
         price: $('#trans-price-input').val(),
-        transactionType: $('#sell-buy-select').val(),    
-    });
-    console.log(transaction);
-});
+        transactionType: $('#sell-buy-select').val(),
+  });
+  updateTable();
+}
+
+$("#trade-submit-button").on('click', clickAddTransaction);

@@ -22,24 +22,27 @@
         </div>
         <div class="box" id="box1">
             <form action="trade-form">
-                <div class="form-field">
+                <div class="form-field" id="form-transaction-date">
                     <p>Transaction Date</p>
                     <input type="date" name="transaction-date" id="trans-date">
                 </div>
-                <div class="form-field">
+                <div class="form-field" id="form-quantity">
                     <p>Quantity</p>
                     <input type="text" name="quantity" id="quantity-input" placeholder="Quantity">
                 </div>
-                <div class="form-field">
+                <div class="form-field" id="form-transaction-price">
                     <p>Trade Price</p>
                     <input type="text" name="trans-price" id="trans-price-input" placeholder="Trade Price">
                 </div>
-                <div class="form-field">
+                <div class="form-field" id="form-sale-type">
                     <select id="sell-buy-select" name="sell-buy-select">
                         <option value="Sale">Sale</option>
                         <option value="Purchase">Purchase</option>
                     </select>
-                    <input type="button" id="trade-submit-button" value="Submit">
+                    <!-- <input type="button" id="trade-submit-button" value="Submit"> -->
+                </div>
+                <div class="form-field" id="form-submit-button">
+                  <input type="button" id="trade-submit-button" value="Submit">
                 </div>
             </form>
         </div>
@@ -53,7 +56,7 @@
             <h2>Ethereum: <span id="coinPrice"></span></h2>
         </div>
         <div class="box" id="box4">
-                <table>
+                <table id="transaction-table">
                         <caption id="table-title">Transaction Details</caption>
                         <tr>
                             <th>Line #</th>
@@ -64,16 +67,6 @@
                             <th>Quantity</th>
                             <th>Gain</th>
                             <th>Term (Short/Long)</th>
-                        </tr>
-                        <tr>
-                            <th>1</th>
-                            <th>3/5/2018</th>
-                            <th>5/3/2018</th>
-                            <th>200</th>
-                            <th>300</th>
-                            <th>2</th>
-                            <th>200</th>
-                            <th>Short</th>
                         </tr>
                     </table>
         </div>

@@ -1,6 +1,25 @@
 "use strict";
 var coinPrice;
-let transaction = [];
+let transaction = [15, 30,320,20];
+
+var svgWidth = 500, svgHeight = 200, barPadding = 5;
+var barWidth = (svgWidth/transaction.length);
+var svg = d3.select('svg').attr("width", svgWidth).attr("height", svgHeight)
+var barChart = svg.selectAll("rect").data(transaction).enter().append("rect")
+.attr("y", function(d)
+{
+    return svgHeight-d
+})
+.attr("height", function(d)
+{
+    return d
+})
+.attr("width", barWidth - barPadding)
+.attr("transform", function(d, i)
+{
+    var translate = [barWidth*i,0];
+    return "translate("+ translate +")";
+});
 window.onload = function()
 {
     getPrice();
@@ -46,3 +65,4 @@ const clickAddTransaction = () => {
 }
 
 $("#trade-submit-button").on('click', clickAddTransaction);
+d3.select('h1').style('color', 'red')

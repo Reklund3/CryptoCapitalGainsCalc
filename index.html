@@ -15,24 +15,28 @@
                 <h1>Crypto Gainz</h1>
             </div>
             <div class="nav-bar">
+                <h3>Ethereum: <span id="coinPrice"></span></h3>
                 <a href="https://pro.coinbase.com/trade/BTC-USD">Coin Base Pro</a>
                 <a href="#">Support Project</a>
                 <a href="#">News</a>
             </div>
         </div>
         <div class="box" id="box1">
+            
+        </div>
+        <div class="box" id="box2">
+            <svg class="bar-chart"></svg>
+        </div>
+        <div class="box" id="box3">
             <form action="trade-form">
                 <div class="form-field" id="form-transaction-date">
-                    <p>Transaction Date</p>
-                    <input type="date" name="transaction-date" id="trans-date">
+                    Transaction Date <input type="date" name="transaction-date" id="trans-date">
                 </div>
                 <div class="form-field" id="form-quantity">
-                    <p>Quantity</p>
-                    <input type="text" name="quantity" id="quantity-input" placeholder="Quantity">
+                    Quantity <input type="text" name="quantity" id="quantity-input" placeholder="Quantity">
                 </div>
                 <div class="form-field" id="form-transaction-price">
-                    <p>Trade Price</p>
-                    <input type="text" name="trans-price" id="trans-price-input" placeholder="Trade Price">
+                    Trade Price <input type="text" name="trans-price" id="trans-price-input" placeholder="Trade Price">
                 </div>
                 <div class="form-field" id="form-sale-type">
                     <select id="sell-buy-select" name="sell-buy-select">
@@ -45,15 +49,6 @@
                   <input type="button" id="trade-submit-button" value="Submit">
                 </div>
             </form>
-        </div>
-        <div class="box" id="box2">
-            <h2>About</h2>
-            <p>This calculator has been developed to help determine your estimated tax liability
-            for capital gains transactions. The data you enter here will help determine if the
-            purchase/earned cryto and subsequent sale are long term or short term gains.</p>
-        </div>
-        <div class="box" id="box3">
-            <h2>Ethereum: <span id="coinPrice"></span></h2>
         </div>
         <div class="box" id="box4">
                 <table id="transaction-table">
@@ -74,6 +69,7 @@
           <p>&copy 2018</p>
         </div>
     </div>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="./script/scripts.js"></script>
 </body>
 </html>

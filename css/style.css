@@ -1,8 +1,7 @@
 body
 {
-    background: rgb(6, 6, 19);
-    color: white;
-    margin: 2% 5%;
+    background: rgb(50, 150, 150);
+    margin: 0%;
 }
 table, th, td {
     padding: 5px 15px;
@@ -14,14 +13,13 @@ table
 }
 form
 {
-    display: inline-flex;
+    display: block;
     justify-content: space-around;
     align-items: center;
     width:90%;
 }
 a, h1
 {
-    color: white;
     text-decoration: none;
 }
 .grid-Container
@@ -34,14 +32,12 @@ a, h1
     "box1 box1"
     "box4 box4"
     "foot foot";
-    grid-gap: 1em;
+    grid-gap: .15em;
 }
 .box
 {
     display: flex;
-    background: rgba(160, 160, 160, 0.274);
-    border: 5px solid white;
-    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.274);
     padding: 15px;
     height: 200px;
 }
@@ -53,10 +49,10 @@ a, h1
 }
 .form-field
 {
-    display: inline-block;
+    display: block;
     text-align: center;
     font-size: 1.25em;
-    width: 30%;
+    width: 100%;
 }
 #logo-text
 {
@@ -70,7 +66,7 @@ a, h1
     justify-content: space-between;
     align-items: center;
     grid-area: top;
-    height: initial;
+    height: auto;
 }
 #box1
 {
@@ -95,8 +91,9 @@ a, h1
 }
 #box3
 {
-    display: inline;
+    display: flexbox;
     text-align: center;
+    justify-content: space-around;
     grid-area: box3;
 }
 #box4
